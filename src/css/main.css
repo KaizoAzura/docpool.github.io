@@ -7,6 +7,24 @@ body {
   box-sizing: border-box;
 }
 
+.card {
+  color: #000000;
+}
+.card h5 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  font-weight: 300;
+}
+
 .navbar {
   box-shadow: 0 3px 10px #e9e9e9;
   border: 1px solid lightgray;
@@ -79,6 +97,18 @@ body {
   font-weight: 500;
   color: #4343bf;
 }
+.main-content .card img {
+  width: 100%;
+  height: 175px;
+  margin: 0.5rem auto;
+  overflow: hidden;
+}
+.main-content .card h5 {
+  font-size: 1rem;
+}
+.main-content .card p {
+  font-size: 0.8rem;
+}
 
 @media screen and (min-width: 992px) {
   .aside {
@@ -99,5 +129,11 @@ body {
   .main-content {
     margin-left: 80px;
     width: calc(100% - 80px);
+  }
+  .main-content .card img {
+    height: auto;
+    width: 50%;
+    -o-object-position: top;
+       object-position: top;
   }
 }/*# sourceMappingURL=main.css.map */

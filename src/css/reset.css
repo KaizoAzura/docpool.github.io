@@ -5,4 +5,22 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.card {
+  color: #000000;
+}
+.card h5 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  font-weight: 300;
 }/*# sourceMappingURL=reset.css.map */
