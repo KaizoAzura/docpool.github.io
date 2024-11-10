@@ -1,0 +1,124 @@
+@import "reset";
+
+// style
+
+// navbar
+.navbar {
+  box-shadow: 0 3px 10px $--shadow;
+  border: 1px solid $--light-gray;
+  z-index: 999;
+  background-color: $--bg-white;
+  .navbar-brand {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: $--primary-color;
+  }
+
+  //   menu
+
+  .nav-item {
+    .nav-link {
+      font-size: 1.25rem;
+      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s;
+      border-radius: 0.25rem;
+
+      &:focus {
+        background-color: $--gray;
+        transition: 0.3s;
+      }
+
+      &:hover {
+        background-color: $--gray;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+// end navbar
+
+.aside {
+  position: fixed;
+  top: 65px;
+  background-color: $--bg-white;
+  border-right: 1px solid $--light-gray;
+  height: 100vh;
+  width: 250px;
+  overflow-y: auto;
+  transition: transform 0.3s;
+  z-index: 999;
+  transform: translateX(-250px);
+
+  &.expand {
+    transform: translateX(0);
+    transition: 0.3s;
+  }
+  .nav-link {
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+
+    span {
+      font-weight: 300;
+    }
+
+    &:hover {
+      background-color: $--gray;
+      transition: 0.3s;
+
+      i {
+        color: $--second-color;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+//   main content
+.main-content {
+  z-index: 10;
+
+  .title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: $--primary-color;
+  }
+}
+
+// responsive
+
+// large responsive
+@media screen and (min-width: 992px) {
+  .aside {
+    transform: translateX(0);
+    width: 80px;
+    padding: 0.25rem 0.2rem;
+
+    &.expand {
+      width: 250px;
+      transition: none;
+      .nav-link {
+        span {
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .nav-link {
+      span {
+        font-size: 0;
+      }
+    }
+  }
+
+  //   main content
+  .main-content {
+    margin-left: 80px;
+    width: calc(100% - 80px);
+  }
+}
