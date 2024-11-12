@@ -5,22 +5,28 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  height: 500vh;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+  background-color: #ffffff;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #4b4dff;
+  border-radius: 2rem;
 }
 
 .card {
   color: #000000;
 }
 .card h5 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: 1rem;
+  font-weight: 500;
 }
 .card p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-  overflow: hidden;
-  font-weight: 300;
+  font-size: 0.9rem;
+  color: #7e7e7e;
+}
+.card .btn {
+  font-size: 0.9rem;
 }/*# sourceMappingURL=reset.css.map */

@@ -45,12 +45,24 @@
   top: 65px;
   background-color: $--bg-white;
   border-right: 1px solid $--light-gray;
-  height: 100vh;
+  height: 90vh;
   width: 250px;
   overflow-y: auto;
   transition: transform 0.3s;
   z-index: 999;
   transform: translateX(-250px);
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    background-color: $--bg-white;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #f7f7f7;
+    border-radius: 2rem;
+  }
+
+  // expand
 
   &.expand {
     transform: translateX(0);
@@ -83,29 +95,36 @@
 .main-content {
   z-index: 10;
 
+  .benefit {
+    background-color: #fafafa;
+    border-radius: 0.5rem;
+  }
+
+  .banner-container {
+    background: url(../../img/banner-1.png);
+    background-size: cover;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
   .title {
     font-size: 1rem;
     font-weight: 500;
     color: $--primary-color;
   }
-
-  .card {
-    img {
-      width: 100%;
-      height: 175px;
-      margin: 0.5rem auto;
-      overflow: hidden;
-    }
-    h5 {
-      font-size: 1rem;
-    }
-    p {
-      font-size: 0.8rem;
-    }
-  }
 }
 
 // responsive
+
+// small responsive
+@media screen and (min-width: 576px) {
+  .main-content {
+    .banner-container {
+      background-position: top;
+    }
+  }
+}
 
 // large responsive
 @media screen and (min-width: 992px) {
@@ -136,12 +155,8 @@
     margin-left: 80px;
     width: calc(100% - 80px);
 
-    .card {
-      img {
-        height: auto;
-        width: 50%;
-        object-position: top;
-      }
+    .banner-container {
+      height: 300px;
     }
   }
 }
