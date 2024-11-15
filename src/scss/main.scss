@@ -2,6 +2,31 @@
 
 // style
 
+// offcanvas
+.offcanvas {
+  &#offcanvasSearch {
+    .form-control {
+      font-size: 0.9rem;
+      transition: 0.3s ease-in-out;
+      font-weight: 300;
+      &:focus {
+        font-size: 1.1rem;
+        transition: 0.3s ease-in-out;
+      }
+
+      &::placeholder {
+        font-size: 0.9rem;
+        font-weight: 300;
+      }
+    }
+    .btn {
+      span {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
 // navbar
 .navbar {
   box-shadow: 0 3px 10px $--shadow;
@@ -26,9 +51,10 @@
       transition: 0.3s;
       border-radius: 0.25rem;
 
-      &:focus {
+      &:active {
         background-color: $--gray;
         transition: 0.3s;
+        transform: scale(0.5);
       }
 
       &:hover {
@@ -42,7 +68,7 @@
 
 .aside {
   position: fixed;
-  top: 65px;
+  top: 60px;
   background-color: $--bg-white;
   border-right: 1px solid $--light-gray;
   height: 90vh;
@@ -94,18 +120,34 @@
 //   main content
 .main-content {
   z-index: 10;
-
-  .benefit {
-    background-color: #fafafa;
-    border-radius: 0.5rem;
-  }
-
   .banner-container {
-    background: url(../../img/banner-1.png);
+    background: radial-gradient(
+        circle at center,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.75)
+      ),
+      url(../../img/banner-1.jpg);
     background-size: cover;
-    height: 200px;
     background-repeat: no-repeat;
     background-position: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: $--bg-white;
+    .banner-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: auto;
+      border-top: 5px solid $--bg-white;
+      border-bottom: 5px solid $--bg-white;
+      padding: 1rem 0;
+    }
+    .banner-text {
+      width: 75%;
+      margin: auto;
+      color: #e7e7e7;
+      font-weight: 300;
+    }
   }
 
   .title {
@@ -128,6 +170,28 @@
 
 // large responsive
 @media screen and (min-width: 992px) {
+  // offcanvas
+  .offcanvas {
+    &#offcanvasSearch {
+      .form-control {
+        font-size: 1rem;
+
+        &:focus {
+          font-size: 1.2rem;
+        }
+
+        &::placeholder {
+          font-size: 1rem;
+        }
+      }
+      .btn {
+        span {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
   .aside {
     transform: translateX(0);
     width: 80px;
@@ -154,9 +218,5 @@
   .main-content {
     margin-left: 80px;
     width: calc(100% - 80px);
-
-    .banner-container {
-      height: 300px;
-    }
   }
 }

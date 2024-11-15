@@ -5,7 +5,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  height: 500vh;
 }
 body::-webkit-scrollbar {
   width: 5px;
@@ -28,5 +27,43 @@ body::-webkit-scrollbar-thumb {
   color: #7e7e7e;
 }
 .card .btn {
+  font-size: 0.9rem;
+}
+
+.offcanvas.offcanvas-top {
+  height: 100vh;
+}
+
+.btn:active {
+  transform: scale(0.75);
+  transition: 0.3s ease-in-out;
+}
+.btn.btn-primary {
+  background-color: #4343bf;
+  border-color: #4343bf;
+}
+.btn.btn-gray {
+  background-color: #e5e5e5;
+  color: #000000;
+  border-color: #e5e5e5;
+}
+.btn.btn-border {
+  border: 1px solid #e5e5e5;
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
+}
+.btn.btn-border:hover {
+  background-color: rgb(241, 241, 241);
+  transition: 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  outline: none;
+  border-color: #4343bf;
+}
+
+.dropdown-menu .dropdown-item {
+  font-weight: 300;
   font-size: 0.9rem;
 }/*# sourceMappingURL=reset.css.map */

@@ -25,8 +25,388 @@
     />
   </head>
   <body>
+    <!-- offcanvas -->
+    <div
+      class="offcanvas offcanvas-top"
+      tabindex="-1"
+      id="offcanvasSearch"
+      aria-labelledby="offcanvasLabelSearch"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasLabel">Search Document</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search..."
+            aria-label="Search"
+          />
+          <button class="btn btn-border d-flex ms-1" type="submit">
+            <span class="material-icons m-auto">search</span>
+          </button>
+          <!-- filter menu -->
+          <button
+            class="btn btn-border d-flex ms-1"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span class="material-icons m-auto">filter_list</span>
+          </button>
+          <!-- filter dropdown menu -->
+          <ul class="dropdown-menu mt-2">
+            <!-- List of common document formats -->
+            <li>
+              <a class="dropdown-item" href="#"
+                ><div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="doc"
+                  /><label class="form-check-label" for="doc"
+                    >Word Document (.doc, .docx)</label
+                  >
+                </div></a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="pdf"
+                  /><label class="form-check-label" for="pdf"
+                    >PDF Document (.pdf)</label
+                  >
+                </div></a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="xls"
+                  /><label class="form-check-label" for="xls"
+                    >Excel Spreadsheet (.xls, .xlsx)</label
+                  >
+                </div></a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="ppt"
+                  /><label class="form-check-label" for="ppt"
+                    >PowerPoint Presentation (.ppt, .pptx)</label
+                  >
+                </div></a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="txt"
+                  /><label class="form-check-label" for="txt"
+                    >Text Document (.txt)</label
+                  >
+                </div></a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="rtf"
+                  /><label class="form-check-label" for="rtf"
+                    >Rich Text Format (.rtf)</label
+                  >
+                </div></a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="odt"
+                  /><label class="form-check-label" for="odt"
+                    >OpenDocument Text (.odt)</label
+                  >
+                </div></a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="odp"
+                  /><label class="form-check-label" for="odp"
+                    >OpenDocument Presentation (.odp)</label
+                  >
+                </div></a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="ods"
+                  /><label class="form-check-label" for="ods"
+                    >OpenDocument Spreadsheet (.ods)</label
+                  >
+                </div></a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="csv"
+                  /><label class="form-check-label" for="csv"
+                    >CSV File (.csv)</label
+                  >
+                </div></a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="epub"
+                  /><label class="form-check-label" for="epub"
+                    >eBook (.epub)</label
+                  >
+                </div></a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="mobi"
+                  /><label class="form-check-label" for="mobi"
+                    >MOBI eBook (.mobi)</label
+                  >
+                </div></a
+              >
+            </li>
+          </ul>
+
+          <!-- filter univ menu -->
+          <button
+            class="btn btn-border d-flex ms-1"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span class="material-icons m-auto">apartment</span>
+          </button>
+          <!-- filter dropdown menu -->
+          <ul class="dropdown-menu mt-2">
+            <li class="mx-2 mb-3">
+              <form class="d-flex">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search..."
+                  aria-label="Search"
+                />
+              </form>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="harvard"
+                  /><label class="form-check-label" for="harvard"
+                    >Harvard University</label
+                  >
+                </div></a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="stanford"
+                  /><label class="form-check-label" for="stanford"
+                    >Stanford University</label
+                  >
+                </div></a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="mit"
+                  /><label class="form-check-label" for="mit"
+                    >Massachusetts Institute of Technology (MIT)</label
+                  >
+                </div></a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="oxford"
+                  /><label class="form-check-label" for="oxford"
+                    >University of Oxford</label
+                  >
+                </div></a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="cambridge"
+                  /><label class="form-check-label" for="cambridge"
+                    >University of Cambridge</label
+                  >
+                </div></a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="caltech"
+                  /><label class="form-check-label" for="caltech"
+                    >California Institute of Technology (Caltech)</label
+                  >
+                </div></a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="ucl"
+                  /><label class="form-check-label" for="ucl"
+                    >University College London (UCL)</label
+                  >
+                </div></a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="imperial"
+                  /><label class="form-check-label" for="imperial"
+                    >Imperial College London</label
+                  >
+                </div></a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="ethz"
+                  /><label class="form-check-label" for="ethz"
+                    >ETH Zurich</label
+                  >
+                </div></a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="ucb"
+                  /><label class="form-check-label" for="ucb"
+                    >University of California, Berkeley (UCB)</label
+                  >
+                </div></a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="columbia"
+                  /><label class="form-check-label" for="columbia"
+                    >Columbia University</label
+                  >
+                </div></a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="princeton"
+                  /><label class="form-check-label" for="princeton"
+                    >Princeton University</label
+                  >
+                </div></a
+              >
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+    <!-- end offcanvas -->
+
     <!-- aside -->
-    <section class="aside pb-3">
+    <section class="aside py-3">
       <div class="container-fluid">
         <div class="row">
           <!-- account profil -->
@@ -44,6 +424,12 @@
                 <a href="#" class="nav-link my-1">
                   <i class="material-icons">folder</i>
                   <span class="ms-2">My Docs</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link my-1">
+                  <i class="material-icons">upload_file</i>
+                  <span class="ms-2">Upload File</span>
                 </a>
               </li>
               <hr />
@@ -106,14 +492,14 @@
 
     <!-- content -->
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand fixed-top">
       <div class="container-fluid">
         <!-- brand -->
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a href="#" class="nav-link" id="menuToggler"
-              ><span class="material-icons"> menu </span></a
-            >
+            <button class="nav-link" id="menuToggler">
+              <span class="material-icons"> menu </span>
+            </button>
           </li>
         </ul>
 
@@ -130,7 +516,11 @@
         <!-- menu -->
         <ul class="navbar-nav ms-auto d-flex flex-row">
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a
+              href="#offcanvasSearch"
+              data-bs-toggle="offcanvas"
+              class="nav-link"
+            >
               <span class="material-icons">search</span>
             </a>
           </li>
@@ -150,8 +540,17 @@
     <!-- end navbar -->
     <!-- main content -->
     <section class="main-content my-5 py-4">
-      <div class="container-fluid">
-        <a href="#" class="banner-link"><div class="banner-container"></div></a>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center banner-container p-3">
+            <h1 class="banner-title">Earn Money by Sharing Study Documents!</h1>
+            <p class="banner-text my-2">
+              Earn passive income sharing documents with millions of Notebank
+              subscribers. You can earn up to $10 every time a student views
+              your document.
+            </p>
+          </div>
+        </div>
         <div class="container">
           <!-- benefit section -->
           <div class="row mt-3 p-2 benefit">
