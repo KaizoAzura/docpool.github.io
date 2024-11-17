@@ -47,4 +47,46 @@ form .form-control:focus {
 .offcanvas#offcanvasSearch {
   height: -moz-max-content;
   height: max-content;
+}
+.offcanvas#offcanvasMail {
+  width: 75%;
+  margin: auto;
+  height: -moz-max-content;
+  height: max-content;
+}
+.offcanvas#offcanvasMail .navbar-nav .nav-item .nav-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+.offcanvas#offcanvasMail .navbar-nav .nav-item .nav-link:hover {
+  background-color: #f7f7f7;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .offcanvas#offcanvasMail {
+    width: 50%;
+    margin: auto 0 auto auto;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .offcanvas#offcanvasMail {
+    width: 25%;
+    margin: auto 0 auto auto;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1440px) {
+  .offcanvas#offcanvasMail {
+    width: 25%;
+    margin: auto 0 auto auto;
+  }
+}
+@media (min-width: 1441px) {
+  .offcanvas#offcanvasMail {
+    width: 25%;
+    margin: auto 0 auto auto;
+  }
 }/*# sourceMappingURL=component.css.map */

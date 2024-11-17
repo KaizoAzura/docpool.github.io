@@ -49,6 +49,71 @@ form .form-control:focus {
   height: -moz-max-content;
   height: max-content;
 }
+.offcanvas#offcanvasMail {
+  width: 75%;
+  margin: auto;
+  height: -moz-max-content;
+  height: max-content;
+}
+.offcanvas#offcanvasMail .navbar-nav .nav-item .nav-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+.offcanvas#offcanvasMail .navbar-nav .nav-item .nav-link:hover {
+  background-color: #f7f7f7;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .offcanvas#offcanvasMail {
+    width: 50%;
+    margin: auto 0 auto auto;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .offcanvas#offcanvasMail {
+    width: 25%;
+    margin: auto 0 auto auto;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1440px) {
+  .offcanvas#offcanvasMail {
+    width: 25%;
+    margin: auto 0 auto auto;
+  }
+}
+@media (min-width: 1441px) {
+  .offcanvas#offcanvasMail {
+    width: 25%;
+    margin: auto 0 auto auto;
+  }
+}
+:root *::-webkit-scrollbar {
+  width: 0.3rem;
+  border-radius: 1rem;
+  background-color: white;
+}
+:root *::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 144, 192);
+  border-radius: 1rem;
+}
+
+.notif-icon {
+  width: 1rem;
+  height: 1rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 body {
   font-family: "Poppins", sans-serif;
@@ -136,8 +201,20 @@ body {
   font-size: 1rem;
 }
 
-@media screen and (min-width: 576px) {
-  .navbar .profil-container .profil-name {
-    width: 200px;
+@media (min-width: 1200px) and (max-width: 1440px) {
+  .navbar .navbar-brand {
+    font-size: 1.1rem;
+  }
+  .navbar .btn {
+    font-size: 1.1rem;
+  }
+  .navbar form .form-control {
+    font-size: 1rem;
+  }
+  .navbar .navbar-nav .nav-item .nav-link i {
+    font-size: 1.25rem;
+  }
+  .navbar .navbar-nav .nav-item .nav-link span {
+    font-size: 0.9rem;
   }
 }/*# sourceMappingURL=main.css.map */
