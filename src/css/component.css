@@ -10,6 +10,14 @@ hr {
   color: black;
   padding: 0.25rem 0.5rem;
 }
+.btn.btn-primary {
+  background-color: #007bff !important;
+  color: white;
+}
+.btn.btn-danger {
+  background-color: red !important;
+  color: white;
+}
 .btn:hover {
   background-color: #d8d8d8;
   transition: 0.3s ease-in-out;
@@ -65,6 +73,29 @@ form .form-control:focus {
 .offcanvas#offcanvasMail .navbar-nav .nav-item .nav-link:hover {
   background-color: #f7f7f7;
 }
+.offcanvas#offcanvasNotif .accordion .accordion-item {
+  border-radius: 0.5rem;
+  border: 1px solid #ececec;
+}
+.offcanvas#offcanvasNotif .accordion .accordion-item.removed {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.offcanvas#offcanvasNotif .accordion .accordion-link {
+  font-size: 1rem;
+  color: black;
+  text-decoration: none;
+}
+.offcanvas#offcanvasNotif .accordion .btn {
+  background-color: transparent;
+  border: 0;
+  font-size: 0.9rem;
+}
+.offcanvas#offcanvasNotif .accordion .accordion-collapse {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
 
 @media (min-width: 768px) and (max-width: 991px) {
   .offcanvas#offcanvasMail {
@@ -89,4 +120,13 @@ form .form-control:focus {
     width: 25%;
     margin: auto 0 auto auto;
   }
+}
+.carousel .carousel-item {
+  width: 100%;
+}
+.carousel .carousel-item img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }/*# sourceMappingURL=component.css.map */
