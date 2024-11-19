@@ -116,8 +116,6 @@ form {
 }
 
 // responsive
-
-// responsive offcanvas
 @include respond-to(md) {
   .offcanvas {
     &#offcanvasMail {
@@ -150,19 +148,6 @@ form {
     &#offcanvasMail {
       width: 25%;
       margin: auto 0 auto auto;
-    }
-  }
-}
-
-// carousel
-
-.carousel {
-  .carousel-item {
-    width: 100%;
-    img {
-      height: 100%;
-      width: 100%;
-      object-fit: contain;
     }
   }
 }

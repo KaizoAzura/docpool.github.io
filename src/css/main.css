@@ -122,16 +122,6 @@ form .form-control:focus {
     margin: auto 0 auto auto;
   }
 }
-.carousel .carousel-item {
-  width: 100%;
-}
-.carousel .carousel-item img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
 :root *::-webkit-scrollbar {
   width: 0.3rem;
   border-radius: 1rem;
@@ -156,12 +146,26 @@ form .form-control:focus {
   justify-content: center;
 }
 
+.title {
+  font-size: 1.5rem;
+  color: black;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: black;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   color: black;
   background-color: white;
+  overflow-y: auto;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .navbar {
@@ -237,6 +241,12 @@ body {
   align-items: center;
   border-radius: 0.5rem;
 }
+.navbar .navbar-nav .nav-item .nav-link.active {
+  background-color: #ececec;
+}
+.navbar .navbar-nav .nav-item .nav-link.active i {
+  color: rgb(0, 144, 192);
+}
 .navbar .navbar-nav .nav-item .nav-link:active {
   transform: scale(0.9);
   transition: 0.3s ease-in-out;
@@ -255,6 +265,49 @@ body {
 }
 .navbar .navbar-nav .nav-item .nav-link span {
   font-size: 1rem;
+}
+
+.content .folder-container {
+  background-color: #ececec;
+  border-radius: 0.5rem;
+}
+.content .folder-container .folder-name {
+  display: flex;
+  align-items: center;
+}
+.content .folder-container .folder-name i {
+  font-size: 1.25rem;
+}
+.content .folder-container .folder-name h6 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: black;
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.content .folder-container .folder-button .btn {
+  font-size: 1rem;
+}
+.content .folder-container .folder-button .dropdown-menu {
+  width: 300px;
+  border-radius: 0;
+}
+.content .folder-container .folder-button .dropdown-menu .dropdown-item {
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding: 0.25rem 1rem;
+}
+.content .folder-container .folder-button .dropdown-menu .dropdown-item.danger:hover i {
+  color: red;
+}
+.content .folder-container .folder-button .dropdown-menu .dropdown-item:hover i {
+  color: rgb(0, 144, 192);
+}
+.content .folder-container .folder-button .dropdown-menu .dropdown-item i {
+  font-size: 1rem;
+  margin-right: 0.5rem;
 }
 
 @media (min-width: 1200px) and (max-width: 1440px) {

@@ -120,13 +120,4 @@ form .form-control:focus {
     width: 25%;
     margin: auto 0 auto auto;
   }
-}
-.carousel .carousel-item {
-  width: 100%;
-}
-.carousel .carousel-item img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
 }/*# sourceMappingURL=component.css.map */
