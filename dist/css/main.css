@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  overflow-x: hidden;
+}
+*::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #5e6872;
+  border-radius: 0.5rem;
+}
+
+body {
+  background-color: white;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+hr {
+  color: whitesmoke;
+}
+
+.btn {
+  padding: 0.25rem 0.5rem;
+  color: black;
+  font-size: 0.8rem;
+  transform: scale(1);
+  display: flex;
+  align-items: center;
+}
+.btn:hover {
+  background-color: whitesmoke;
+}
+.btn:active {
+  transform: scale(0.9);
+  transition: 0.3s ease-in-out;
+}
+.btn:focus {
+  border: 0;
+  outline: none;
+  box-shadow: none;
+}
+.btn i {
+  font-size: 1.1rem;
+}
+
+@media screen and (min-width: 992px) {
+  .btn {
+    font-size: 1rem;
+  }
+}
+.offcanvas#offcanvasSearch {
+  height: -moz-max-content;
+  height: max-content;
+}
+
+form {
+  background-color: white;
+  border: 1px solid rgb(191, 191, 191);
+  border-radius: 0.5rem;
+}
+form .form-control {
+  border: 0;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+}
+form .form-control:focus {
+  border: 0;
+  box-shadow: none;
+  outline: none;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+/* Style untuk aside */
+.aside {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Awalnya tersembunyi di luar layar */
+  width: 250px;
+  height: 100%;
+  background-color: #343a40;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+.aside.active {
+  left: 0;
+}
+.aside .profil-container {
+  background-color: #343a40;
+}
+.aside .profil-container .profil-user {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: whitesmoke;
+  padding: 0.5rem;
+}
+.aside .profil-container .profil-user .profil-img-container {
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aside .profil-container .profil-user .profil-img-container .profil-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  display: block;
+}
+.aside .profil-container .profil-user .profil-name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 150px;
+  font-size: 1rem;
+}
+.aside .navbar-aside {
+  padding: 0 0.5rem 2rem;
+}
+.aside .navbar-aside .nav-link {
+  font-size: 0.9rem;
+  color: whitesmoke;
+  font-weight: 300;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease;
+  margin: 0.1rem auto;
+}
+.aside .navbar-aside .nav-link i {
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+}
+.aside .navbar-aside .nav-link:hover {
+  background-color: #464e56;
+}
+.aside .navbar-aside .nav-link:active {
+  transform: scale(0.9);
+  transition: 0.3s ease;
+}
+.aside .navbar-aside .nav-link.active {
+  background-color: #464e56;
+}
+
+/* Content saat aside aktif */
+.content {
+  transition: 0.3s ease-in-out;
+}
+.content.shift {
+  margin-left: 250px;
+  transition: all 0.3s ease;
+}
+.content .navbar {
+  border-bottom: 1px solid lightgray;
+}
+.content .navbar .navbar-brand {
+  font-weight: bold;
+  color: black;
+  font-size: 1.1rem;
+}
+
+#searchFormContainer {
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#searchFormContainer input {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+#searchFormContainer button {
+  padding: 5px 10px;
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */

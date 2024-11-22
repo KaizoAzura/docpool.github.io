@@ -1,0 +1,29 @@
+.btn {
+  padding: 0.25rem 0.5rem;
+  color: black;
+  font-size: 0.8rem;
+  transform: scale(1);
+  display: flex;
+  align-items: center;
+}
+.btn:hover {
+  background-color: whitesmoke;
+}
+.btn:active {
+  transform: scale(0.9);
+  transition: 0.3s ease-in-out;
+}
+.btn:focus {
+  border: 0;
+  outline: none;
+  box-shadow: none;
+}
+.btn i {
+  font-size: 1.1rem;
+}
+
+@media screen and (min-width: 992px) {
+  .btn {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=button.css.map */

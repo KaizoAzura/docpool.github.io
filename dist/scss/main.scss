@@ -1,0 +1,125 @@
+@import "reset";
+@import "component/button";
+@import "component/offcanvas";
+@import "component/form";
+
+/* Style untuk aside */
+.aside {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Awalnya tersembunyi di luar layar */
+  width: 250px;
+  height: 100%;
+  background-color: #343a40;
+  transition: all 0.3s ease;
+  z-index: 1000;
+
+  &.active {
+    left: 0;
+  }
+
+  // nav aside
+  // profil user
+  .profil-container {
+    background-color: #343a40;
+    .profil-user {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: whitesmoke;
+      padding: 0.5rem;
+      .profil-img-container {
+        width: 2.3rem;
+        height: 2.3rem;
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .profil-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
+        }
+      }
+
+      .profil-name {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 150px;
+        font-size: 1rem;
+      }
+    }
+  }
+  // navbar aside
+  .navbar-aside {
+    padding: 0 0.5rem 2rem;
+    .nav-link {
+      font-size: 0.9rem;
+      color: whitesmoke;
+      font-weight: 300;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      transition: 0.3s ease;
+      margin: 0.1rem auto;
+      i {
+        font-size: 1.1rem;
+        margin-right: 0.5rem;
+      }
+      &:hover {
+        background-color: #464e56;
+      }
+      &:active {
+        transform: scale(0.9);
+        transition: 0.3s ease;
+      }
+      &.active {
+        background-color: #464e56;
+      }
+    }
+  }
+}
+
+/* Content saat aside aktif */
+
+.content {
+  transition: 0.3s ease-in-out;
+  &.shift {
+    margin-left: 250px;
+    transition: all 0.3s ease;
+  }
+
+  .navbar {
+    border-bottom: 1px solid lightgray;
+    .navbar-brand {
+      font-weight: bold;
+      color: black;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+#searchFormContainer {
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#searchFormContainer input {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+#searchFormContainer button {
+  padding: 5px 10px;
+  cursor: pointer;
+}

@@ -1,34 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Docpool - Share your document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-
-    <!-- icon -->
-    <link rel="icon" type="image/x-icon" href="img/logo.png" />
-    <!-- icon remixicon -->
+    <!-- link icon -->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
     <!-- link css -->
-    <link rel="stylesheet" href="src/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="dist/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="dist/css/main.css" />
   </head>
   <body>
-    <!-- offcanvas -->
-    <!-- offcanvas search -->
+    <!-- offcanvas content -->
     <div
       class="offcanvas offcanvas-top"
       tabindex="-1"
       id="offcanvasSearch"
-      aria-labelledby="offcanvasLabel"
+      aria-labelledby="offcanvasSearch"
     >
       <div class="offcanvas-body">
         <form class="d-flex" role="search">
@@ -39,538 +33,135 @@
             aria-label="Search"
           />
           <button class="btn" type="submit">
-            <i class="ri-search-line"></i>
+            <i class="ri-search-2-line"></i>
           </button>
         </form>
       </div>
     </div>
-    <!-- end offcanvas search -->
-    <!-- offcanvas mail -->
-    <div
-      class="offcanvas offcanvas-top mt-5"
-      tabindex="-1"
-      id="offcanvasMail"
-      aria-labelledby="offcanvasLabel"
-    >
-      <div class="offcanvas-body">
+    <!-- end offcanvas content -->
+
+    <!-- aside -->
+    <div class="aside">
+      <!-- profil user -->
+      <div class="row profil-container sticky-top">
+        <div class="col-12">
+          <a href="#" class="nav-link profil-user">
+            <div class="profil-img-container">
+              <img
+                src="src/img/profil-image.jpeg"
+                class="profil-img"
+                alt="Profil Image"
+              />
+            </div>
+            <h5 class="profil-name mb-0 ms-2">Nicolas Satria Afri Liyansa</h5>
+          </a>
+        </div>
+        <hr />
+      </div>
+      <!-- link aside -->
+      <div class="navbar-aside">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a href="#" class="nav-link"
-              >Chat<span class="ms-auto notif-icon">3</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">Discussion</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">Review</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link"
-              >Support Message<span class="ms-auto notif-icon">2</span></a
+            <a href="#" class="nav-link active"
+              ><i class="ri-home-9-line"></i>Homepage</a
             >
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link"
-              >Commentar<span class="ms-auto notif-icon">1</span></a
+              ><i class="ri-dashboard-line"></i>Dashboard</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"
+              ><i class="ri-hard-drive-3-line"></i>My file</a
+            >
+          </li>
+          <hr />
+          <li class="nav-item">
+            <a href="#" class="nav-link"
+              ><i class="ri-compass-3-line"></i>Discover</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"
+              ><i class="ri-book-shelf-line"></i>Categories</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"
+              ><i class="ri-bookmark-line"></i>Favourites</a
+            >
+          </li>
+          <hr />
+          <li class="nav-item">
+            <a href="#" class="nav-link"
+              ><i class="ri-exchange-dollar-line"></i>Transaction</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"
+              ><i class="ri-chat-1-line"></i>Messages</a
+            >
+          </li>
+          <hr />
+          <li class="nav-item">
+            <a href="#" class="nav-link"
+              ><i class="ri-settings-3-line"></i>Setting</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"
+              ><i class="ri-logout-box-r-line"></i>Logout</a
             >
           </li>
         </ul>
       </div>
     </div>
-    <!-- end offcanvas mail -->
-    <!-- offcanvas notif -->
-    <div
-      class="offcanvas offcanvas-end"
-      tabindex="-1"
-      id="offcanvasNotif"
-      aria-labelledby="offcanvasLabel"
-    >
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNotifLabel">Notifications</h5>
-        <button
-          type="button"
-          class="btn-close btn"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="offcanvas-body">
-        <div class="accordion" id="accordionNotif">
-          <div class="accordion-item p-3 my-2">
-            <a href="#" class="accordion-link">Please verify your account</a>
-            <div class="accordion-header mt-2">
-              <button
-                class="btn btn-primary"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#notifAccordion1"
-                aria-expanded="true"
-                aria-controls="notifAccordion1"
-              >
-                Read More
-              </button>
-              <button class="btn btn-danger btn-close-accordion" type="button">
-                Delete
-              </button>
-            </div>
-            <div
-              id="notifAccordion1"
-              class="accordion-collapse collapse pt-2"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body p-0">
-                This section provides additional information regarding recent
-                notifications. You can check your messages, updates, or other
-                alerts by navigating to the relevant section. Stay informed and
-                ensure you do not miss any important communication or updates.
-              </div>
-            </div>
-          </div>
-          <!-- notif second -->
-          <div class="accordion-item p-3 my-2">
-            <a href="#" class="accordion-link">Please verify your account</a>
-            <div class="accordion-header mt-2">
-              <button
-                class="btn btn-primary"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#notifAccordion2"
-                aria-expanded="true"
-                aria-controls="notifAccordion2"
-              >
-                Read More
-              </button>
-              <button class="btn btn-danger btn-close-accordion" type="button">
-                Delete
-              </button>
-            </div>
-            <div
-              id="notifAccordion2"
-              class="accordion-collapse collapse pt-2"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body p-0">
-                This section provides additional information regarding recent
-                notifications. You can check your messages, updates, or other
-                alerts by navigating to the relevant section. Stay informed and
-                ensure you do not miss any important communication or updates.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end offcanvas notif -->
-    <!-- end offcanvas -->
+    <!-- end aside -->
 
-    <!-- navbar -->
-    <nav class="navbar fixed-top">
-      <div class="container-fluid">
-        <button
-          class="navbar-toggler p-2 btn"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
-          aria-label="Toggle navigation"
-        >
-          <i class="ri-menu-line"></i>
-        </button>
-        <a class="navbar-brand me-auto ms-1" href="#">
-          <img
-            src="img/logo.png"
-            alt="Logo"
-            width="30"
-            height="30"
-            class="d-inline-block align-text-top"
-          />
-          DocPool
-        </a>
-        <!-- form menu for 992px up -->
-        <form class="d-none d-lg-flex w-50" role="search">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search..."
-            aria-label="Search"
-          />
-          <button class="btn" type="submit">
-            <i class="ri-search-line"></i>
+    <!-- content -->
+    <div class="content">
+      <!-- navbar -->
+      <nav class="navbar navbar-expand" class="content">
+        <div class="container-fluid">
+          <button class="btn" id="asideToggler">
+            <i class="ri-menu-line"></i>
           </button>
-        </form>
-        <!-- end form -->
-        <!-- another menu button -->
-        <ul class="navbar-nav d-flex flex-row">
-          <li class="nav-item d-lg-none">
-            <button
-              class="btn"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasSearch"
-              aria-controls="offcanvasExample"
-            >
-              <i class="ri-search-line"></i>
-            </button>
-          </li>
-          <li class="nav-item">
-            <a
-              class="btn ms-lg-2"
-              href="#offcanvasMail"
-              data-bs-toggle="offcanvas"
-            >
-              <i class="ri-mail-line"></i>
-              <span class="badge translate-middle p-1"> 5 </span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="btn" href="#offcanvasNotif" data-bs-toggle="offcanvas"
-              ><i class="ri-notification-3-line"></i
-              ><span class="badge translate-middle p-1"> 2 </span></a
-            >
-          </li>
-        </ul>
-        <!-- end another menu -->
-        <div
-          class="offcanvas offcanvas-start"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-        >
-          <div class="offcanvas-header">
-            <a href="#" class="profil-container">
-              <div class="profil-user me-auto">
-                <img src="img/profil.png" alt="Logo" class="profil-image" />
-              </div>
-              <h5 href="#" class="profil-name ms-2 mb-0">
-                User1262889hdhuwgq0
-              </h5>
-            </a>
+          <a class="navbar-brand me-auto ms-2 d-none d-md-block" href="#"
+            >Docpool</a
+          >
 
-            <button
-              type="button"
-              class="btn-close btn"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link p-2 active" aria-current="page" href="#"
-                  ><i class="ri-home-9-line"></i
-                  ><span class="ms-2">Homepage</span></a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link p-2" href="#"
-                  ><i class="ri-hard-drive-2-line"></i
-                  ><span class="ms-2">My document</span></a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link p-2" href="#"
-                  ><i class="ri-file-add-line"></i
-                  ><span class="ms-2">Upload document</span></a
-                >
-              </li>
-              <hr />
-              <li class="nav-item">
-                <a class="nav-link p-2" href="#"
-                  ><i class="ri-compass-3-line"></i
-                  ><span class="ms-2">Discover</span></a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link p-2" href="#"
-                  ><i class="ri-folder-shared-line"></i
-                  ><span class="ms-2">Share with me</span></a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link p-2" href="#"
-                  ><i class="ri-bard-line"></i
-                  ><span class="ms-2">Favorite</span></a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link p-2" href="#"
-                  ><i class="ri-mail-line"></i
-                  ><span class="ms-2">Message</span></a
-                >
-              </li>
-              <hr />
-              <li class="nav-item">
-                <a class="nav-link p-2" href="#"
-                  ><i class="ri-price-tag-3-line"></i
-                  ><span class="ms-2">Sell document</span></a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link p-2" href="#"
-                  ><i class="ri-wallet-line"></i
-                  ><span class="ms-2">My balance</span></a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link p-2" href="#"
-                  ><i class="ri-bar-chart-line"></i
-                  ><span class="ms-2">Earning & Transaction</span></a
-                >
-              </li>
-              <hr />
-              <li class="nav-item">
-                <a class="nav-link p-2" href="#"
-                  ><i class="ri-question-line"></i
-                  ><span class="ms-2">Help</span></a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link p-2" href="#"
-                  ><i class="ri-settings-3-line"></i
-                  ><span class="ms-2">Setting</span></a
-                >
-              </li>
-              <hr />
-              <li class="nav-item">
-                <a class="nav-link p-2" href="#"
-                  ><i class="ri-logout-box-r-line"></i
-                  ><span class="ms-2">Logout</span></a
-                >
-              </li>
-            </ul>
-          </div>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link btn" href="#"><i class="ri-mail-line"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn" href="#"
+                ><i class="ri-notification-3-line"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link btn"
+                href="#offcanvasSearch"
+                data-bs-toggle="offcanvas"
+              >
+                <i class="ri-search-2-line"></i>
+              </a>
+            </li>
+          </ul>
         </div>
+      </nav>
+      <!-- end navbar -->
+      <!-- main content -->
+      <div class="main-content">
+        <h1></h1>
       </div>
-    </nav>
-    <!-- end navbar -->
+      <!-- end main content -->
+    </div>
+    <!-- end content -->
 
-    <!-- hero section -->
-    <section class="py-5 mt-4">
-      <div class="container-fluid">
-        <div class="container content py-3">
-          <h2 class="title">Welcome to Docpool</h2>
-          <h5 class="subtitle my-3">My folder</h5>
-          <!-- my folder -->
-          <div class="row">
-            <!-- folder 1 -->
-            <div class="col-md-6 col-lg-4 px-4 my-2">
-              <div class="row folder-container p-2">
-                <div class="col-10">
-                  <div class="folder-name">
-                    <i class="ri-folder-2-fill"></i>
-                    <h6 class="folder-title mb-0 ms-2">Certification</h6>
-                  </div>
-                </div>
-                <div class="col-2 folder-button text-end">
-                  <!-- Dropdown Button -->
-                  <div class="dropdown">
-                    <button
-                      class="btn"
-                      type="button"
-                      id="dropdownMenuButton"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      <i class="ri-more-2-fill"></i>
-                    </button>
-                    <ul
-                      class="dropdown-menu"
-                      aria-labelledby="dropdownMenuButton"
-                    >
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          ><i class="ri-folder-open-line"></i>Open with</a
-                        >
-                      </li>
-                      <li><hr class="dropdown-divider" /></li>
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          ><i class="ri-folder-download-line"></i>Download</a
-                        >
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          ><i class="ri-edit-2-line"></i>Change Name</a
-                        >
-                      </li>
-                      <li><hr class="dropdown-divider" /></li>
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          ><i class="ri-folder-shared-line"></i>Share</a
-                        >
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          ><i class="ri-folder-settings-line"></i>Setting</a
-                        >
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          ><i class="ri-information-line"></i>Information</a
-                        >
-                      </li>
-                      <li><hr class="dropdown-divider" /></li>
-                      <li>
-                        <a class="dropdown-item danger" href="#"
-                          ><i class="ri-delete-bin-6-line"></i>Delete</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- end folder 1 -->
-            <!-- folder 2 -->
-            <div class="col-md-6 col-lg-4 px-4 my-2">
-              <div class="row folder-container p-2">
-                <div class="col-10">
-                  <div class="folder-name">
-                    <i class="ri-folder-2-fill"></i>
-                    <h6 class="folder-title mb-0 ms-2">Selling Document</h6>
-                  </div>
-                </div>
-                <div class="col-2 folder-button text-end">
-                  <!-- Dropdown Button -->
-                  <div class="dropdown">
-                    <button
-                      class="btn"
-                      type="button"
-                      id="dropdownMenuButton"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      <i class="ri-more-2-fill"></i>
-                    </button>
-                    <ul
-                      class="dropdown-menu"
-                      aria-labelledby="dropdownMenuButton"
-                    >
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          ><i class="ri-folder-open-line"></i>Open with</a
-                        >
-                      </li>
-                      <li><hr class="dropdown-divider" /></li>
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          ><i class="ri-folder-download-line"></i>Download</a
-                        >
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          ><i class="ri-edit-2-line"></i>Change Name</a
-                        >
-                      </li>
-                      <li><hr class="dropdown-divider" /></li>
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          ><i class="ri-folder-shared-line"></i>Share</a
-                        >
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          ><i class="ri-folder-settings-line"></i>Setting</a
-                        >
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          ><i class="ri-information-line"></i>Information</a
-                        >
-                      </li>
-                      <li><hr class="dropdown-divider" /></li>
-                      <li>
-                        <a class="dropdown-item danger" href="#"
-                          ><i class="ri-delete-bin-6-line"></i>Delete</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- end folder 2 -->
-            <!-- folder 3 -->
-            <div class="col-md-6 col-lg-4 px-4 my-2">
-              <div class="row folder-container p-2">
-                <div class="col-10">
-                  <div class="folder-name">
-                    <i class="ri-folder-2-fill"></i>
-                    <h6 class="folder-title mb-0 ms-2">Important Document</h6>
-                  </div>
-                </div>
-                <div class="col-2 folder-button text-end">
-                  <!-- Dropdown Button -->
-                  <div class="dropdown">
-                    <button
-                      class="btn"
-                      type="button"
-                      id="dropdownMenuButton"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      <i class="ri-more-2-fill"></i>
-                    </button>
-                    <ul
-                      class="dropdown-menu"
-                      aria-labelledby="dropdownMenuButton"
-                    >
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          ><i class="ri-folder-open-line"></i>Open with</a
-                        >
-                      </li>
-                      <li><hr class="dropdown-divider" /></li>
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          ><i class="ri-folder-download-line"></i>Download</a
-                        >
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          ><i class="ri-edit-2-line"></i>Change Name</a
-                        >
-                      </li>
-                      <li><hr class="dropdown-divider" /></li>
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          ><i class="ri-folder-shared-line"></i>Share</a
-                        >
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          ><i class="ri-folder-settings-line"></i>Setting</a
-                        >
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          ><i class="ri-information-line"></i>Information</a
-                        >
-                      </li>
-                      <li><hr class="dropdown-divider" /></li>
-                      <li>
-                        <a class="dropdown-item danger" href="#"
-                          ><i class="ri-delete-bin-6-line"></i>Delete</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- end folder 3 -->
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- end hero section -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script src="src/js/script.js"></script>
+    <script src="dist/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/js/script.js"></script>
   </body>
 </html>
